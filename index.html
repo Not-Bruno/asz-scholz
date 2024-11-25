@@ -1,74 +1,249 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto Service Zentrum Scholz</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <header class="header">
+    <header>
         <div class="logo">
+            <img src="images/unnamed.jpg" alt="Auto Service Zentrum Scholz Logo">
             <h1>Auto Service Zentrum Scholz</h1>
         </div>
-        <p class="slogan">Wir bringen Ihre Wünsche in Bewegung</p>
+        <nav>
+            <ul>
+                <li><a href="#services">Unser Service</a></li>
+                <li><a href="#team">Das Team</a></li>
+                <li><a href="#location">Hier finden Sie uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#home">Startseite</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">Über Uns</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
+    <section class="hero">
+        <h1>Willkommen bei Auto Service Zentrum Scholz!</h1>
+        <p>Wir bringen ihre Wünsche in Bewegung!</p>
+        <button onclick="scrollToSection('#services')">Unsere Services entdecken</button>
+    </section>
 
-    <main class="main-content">
-        <section id="home">
-            <h2>Willkommen bei Auto Service Zentrum Scholz</h2>
-            <p>Ihr Partner für professionelle Fahrzeugbetreuung und zuverlässigen Service.</p>
-        </section>
-
-        <section id="services" class="services-section">
-            <h2>Unsere Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Fahrzeugwartung</h3>
-                    <p>Regelmäßige Wartung und Inspektion für Ihre Sicherheit.</p>
-                </div>
-                <div class="service">
-                    <h3>Reparaturen</h3>
-                    <p>Schnelle und professionelle Reparaturen für alle Fahrzeugtypen.</p>
-                </div>
-                <div class="service">
-                    <h3>Verkauf</h3>
-                    <p>Entdecken Sie unser Angebot an Neu- und Gebrauchtwagen.</p>
-                </div>
+    <section id="info" class="section info">
+        <h2>Wichtige Informationen</h2>
+        <div class="info-container">
+            <div class="info-box">
+                <h3>🎄 Weihnachtsgruß</h3>
+                <p>Unser Team wünscht Ihnen und Ihrer Familie eine frohe Weihnachtszeit!</p>
             </div>
-        </section>
+            <div class="info-box">
+                <h3>🛠️ Werkstatt geschlossen</h3>
+                <p>Vom 23.12. bis 06.01. bleibt unsere Werkstatt geschlossen.</p>
+            </div>
+            <div class="info-box">
+                <h3>❄️ Reifenwechsel</h3>
+                <p>Die Winterreifen-Saison hat begonnen! Denken Sie an ihre Winterreifen und vereinbaren Sie jetzt einen
+                    Termin.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="about">
-            <h2>Über Uns</h2>
-            <p>Wir sind ein erfahrenes Team, das sich seit Jahren um die Wünsche und Bedürfnisse unserer Kunden kümmert. Qualität und Kundenzufriedenheit stehen bei uns an erster Stelle.</p>
-        </section>
+    <section id="services" class="section">
+        <h2>Unser Service</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                <h3>Wartung</h3>
+                <p>Regelmäßige Inspektionen für ein sicheres Fahrerlebnis.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-toolbox"></i>
+                <h3>Reparatur</h3>
+                <p>Schnelle und zuverlässige Reparaturen bei Problemen.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Reifenwechsel</h3>
+                <p>Wechsel der Sommer- oder Winterreifen inkl. Lagerung.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-car"></i>
+                <h3>TÜV</h3>
+                <p>Wir bereiten Ihr Auto auf die nächste Prüfung vor.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Kontakt</h2>
-            <p>Haben Sie Fragen? Kontaktieren Sie uns jederzeit!</p>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">E-Mail:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Nachricht:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Absenden</button>
-            </form>
-        </section>
-    </main>
+    <section id="team" class="section team">
+        <h2>Das Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <i class="fa-solid fa-person"></i>
+                <p class="name">Lars Scholz</p>
+                <p class="role">Werkstattleiter & Meister</p>
+            </div>
+            <div class="team-member">
+                <i class="fa-solid fa-person-dress"></i>
+                <p class="name">Daniela Scholz</p>
+                <p class="role">Buchhaltung & Kundenservice</p>
+            </div>
+            <div class="team-member">
+                <i class="fa-solid fa-person"></i>
+                <p class="name">Kevin Schlaag</p>
+                <p class="role">Kfz-Mechatroniker</p>
+            </div>
+            <div class="team-member">
+                <i class="fa-solid fa-person"></i>
+                <p class="name">Stephen Künast</p>
+                <p class="role">Betriebstechniker</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <h2>So erreichen Sie uns</h2>
+        <div class="contact-container">
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <p><strong>Telefon:</strong><br><a href="tel:+4934920658230">+49 34920 - 658230</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p><strong>Email:</strong><br><a href="mailto:info@autohaus-scholz.de">info@autohaus-scholz.de</a></p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p><strong>Adresse:</strong><br> Mundschenkstraße 7, 06889 Lutherstadt Wittenberg</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-clock"></i>
+                <p><strong>Öffnungszeiten:</strong><br>Mo-Do: 08:00 - 17:00<br>Fr: 09:00 - 14:00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+        <h2>Unsere Galerie</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/image1.jpg" alt="Foto 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/image2.jpg" alt="Foto 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/image3.jpg" alt="Foto 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/image4.jpg" alt="Foto 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/image5.jpg" alt="Foto 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/image6.jpg" alt="Foto 4">
+            </div>
+            <!-- Weitere Bilder können hier hinzugefügt werden -->
+        </div>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-img" src="" alt="Großes Bild">
+        </div>
+    </section>
 
     <footer class="footer">
-        <p>&copy; 2024 Auto Service Zentrum Scholz. Alle Rechte vorbehalten.</p>
+        <p>© 2024 Auto Service Zentrum Scholz</p>
+        <p>
+            <a href="#" id="open-impressum">Impressum & Datenschutz</a>
+        </p>
     </footer>
+
+    <!-- Pop-up für Impressum -->
+    <div id="impressum-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-impressum">&times;</span>
+            <h2>Impressum</h2>
+            <p>Angaben gemäß § 5 DDG</p>
+            <p>Max Muster <br>
+                Musterweg<br>
+                12345 Musterstadt <br>
+            </p>
+            <p> <strong>Vertreten durch: </strong><br>
+                Max Muster<br>
+            </p>
+            <p><strong>Kontakt:</strong> <br>
+                Telefon: 01234-789456<br>
+                Fax: 1234-56789<br>
+                E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a></br></p>
+            <p><strong>Registereintrag: </strong><br>
+                Eintragung im Registergericht: Musterstadt<br>
+                Registernummer: 12345<br></p>
+            <p><strong>Umsatzsteuer-ID: </strong> <br>
+                Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br><br>
+                <strong>Wirtschafts-ID: </strong><br>
+                Musterwirtschaftsid<br>
+            </p>
+            <p><strong>Aufsichtsbehörde:</strong><br>
+                Musteraufsicht Musterstadt<br></p>
+            <p><strong>Haftungsausschluss: </strong><br><br><strong>Haftung für Inhalte</strong><br><br>
+                Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit
+                und
+                Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7
+                Abs.1
+                DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10
+                DDG sind
+                wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen
+                zu
+                überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                Verpflichtungen zur
+                Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon
+                unberührt.
+                Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
+                Rechtsverletzung
+                möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
+                entfernen.<br><br><strong>Urheberrecht</strong><br><br>
+                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+                Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der
+                Grenzen
+                des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+                Downloads und
+                Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die
+                Inhalte auf
+                dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet.
+                Insbesondere werden
+                Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung
+                aufmerksam
+                werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir
+                derartige Inhalte umgehend entfernen.<br><br><strong>Datenschutz</strong><br><br>
+                Die Nutzung unserer Webseite ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf
+                unseren
+                Seiten personenbezogene Daten (beispielsweise Name, Anschrift oder eMail-Adressen) erhoben werden,
+                erfolgt dies,
+                soweit möglich, stets auf freiwilliger Basis. Diese Daten werden ohne Ihre ausdrückliche Zustimmung
+                nicht an
+                Dritte weitergegeben. <br>
+                Wir weisen darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail)
+                Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist
+                nicht
+                möglich. <br>
+                Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten durch Dritte zur
+                Übersendung von
+                nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit ausdrücklich
+                widersprochen.
+                Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten
+                Zusendung von
+                Werbeinformationen, etwa durch Spam-Mails, vor.<br>
+            </p><br>
+        </div>
+    </div>
+
+    <div id="snowflakes"></div> <!-- Weihnachtseffekte -->
+    <script src="script.js"></script>
 </body>
+
 </html>
