@@ -8,12 +8,9 @@ const lightboxImg = document.querySelector('.lightbox-img');
 const closeLightbox = document.querySelector('.lightbox .close');
 
 document.querySelectorAll('.info-box').forEach((box) => {
-    const today = new Date();
-    const closeDates = ['2024-12-24', '2024-12-31']; // Beispiel-Daten
-    const isOutdated = closeDates.some((date) => new Date(date) < today);
-
-    if (isOutdated) {
-        box.style.display = 'none'; // Entfernt abgelaufene Infos
+    const closeDate = box.dataset.closeDate; // Datum in HTML-Attribut speichern
+    if (closeDate && new Date(closeDate) < new Date()) {
+        box.style.display = 'none';
     }
 });
 
@@ -23,8 +20,12 @@ const galleryImages = document.querySelectorAll('.gallery-item img');
 // Bild in der Lightbox anzeigen
 galleryImages.forEach(image => {
     image.addEventListener('click', () => {
-        lightbox.style.display = 'flex';
-        lightboxImg.src = image.src;
+        if (image.src) { // Sicherstellen, dass die Quelle existiert
+            lightbox.style.display = 'flex';
+            lightboxImg.src = image.src;
+        } else {
+            console.error("Bildquelle nicht gefunden!");
+        }
     });
 });
 
@@ -40,23 +41,25 @@ lightbox.addEventListener('click', (e) => {
     }
 });
 
-// Modal-Elemente
+// Elemente selektieren
 const impressumModal = document.getElementById('impressum-modal');
-const datenschutzModal = document.getElementById('datenschutz-modal');
-
-// Buttons und Links
 const openImpressum = document.getElementById('open-impressum');
-const openDatenschutz = document.getElementById('open-datenschutz');
 const closeImpressum = document.getElementById('close-impressum');
-const closeDatenschutz = document.getElementById('close-datenschutz');
 
-// Schließen der Modals bei Klick außerhalb des Inhalts
-window.addEventListener('click', (e) => {
-    if (e.target === impressumModal) {
+// Öffnen des Impressum-Popups
+openImpressum.addEventListener('click', () => {
+    impressumModal.style.display = 'block'; // Modal sichtbar machen
+});
+
+// Schließen des Impressum-Popups
+closeImpressum.addEventListener('click', () => {
+    impressumModal.style.display = 'none'; // Modal verstecken
+});
+
+// Schließen des Popups bei Klick außerhalb des Modals
+window.addEventListener('click', (event) => {
+    if (event.target === impressumModal) {
         impressumModal.style.display = 'none';
-    }
-    if (e.target === datenschutzModal) {
-        datenschutzModal.style.display = 'none';
     }
 });
 
