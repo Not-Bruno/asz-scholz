@@ -2,6 +2,46 @@ function scrollToSection(sectionId) {
     document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
 }
 
+// Prüfen, ob das Gerät mobil ist
+function isMobileDevice() {
+    return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+}
+
+// Popup anzeigen, wenn ein mobiles Gerät erkannt wird
+function showMobilePopup() {
+    if (isMobileDevice()) {
+        console.log("Mobilgerät erkannt. Popup wird angezeigt."); // Debugging
+        const popup = document.createElement('div');
+        popup.id = 'mobile-popup';
+        popup.style.position = 'fixed';
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.padding = '20px';
+        popup.style.background = 'white';
+        popup.style.border = '2px solid #004080';
+        popup.style.borderRadius = '8px';
+        popup.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        popup.style.zIndex = '1000';
+        popup.style.textAlign = 'center';
+
+        popup.innerHTML = `
+            <p style="color: #555;">Die Seite ist nicht für Mobilgeräte optimiert! Es wäre besser, wenn Sie die Seite mit Ihrem Laptop aufrufen.</p>
+            <button id="close-popup" style="margin-top: 10px; padding: 10px; background: #004080; color: white; border: none; border-radius: 5px; cursor: pointer;">Weiter</button>
+        `;
+
+        document.body.appendChild(popup);
+
+        document.getElementById('close-popup').addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    } else {
+        console.log("Kein Mobilgerät erkannt. Popup wird nicht angezeigt."); // Debugging
+    }
+}
+
+document.addEventListener('DOMContentLoaded', showMobilePopup);
+
 // Elemente für die Lightbox
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-img');
