@@ -10,13 +10,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
+
 <body>
-    <header>
+<main>
+
+    
+<header role="banner">
         <div class="logo">
             <img src="images/unnamed.jpg" alt="Auto Service Zentrum Scholz Logo">
             <h1>Auto Service Zentrum Scholz</h1>
         </div>
-        <nav>
+        
+<nav role="navigation">
             <ul>
                 <li><a href="#services">Unser Service</a></li>
                 <li><a href="#team">Das Team</a></li>
@@ -37,7 +42,7 @@
         <div class="info-container">
             <div class="info-box" data-close-date="2024-12-26">
                 <h3>🎄 Weihnachtsgruß</h3>
-                <p>Unser Team wünscht Ihnen und Ihrer Familie eine frohe Weihnachtszeit!</p>
+                <p>Das ASZ Scholz Team wünscht Ihnen und Ihrer Familie eine frohe Weihnachtszeit!</p>
             </div>
             <div class="info-box" data-close-date="2025-01-06">
                 <h3>🛠️ Werkstatt geschlossen</h3>
@@ -120,7 +125,7 @@
             </div>
             <div class="contact-item">
                 <i class="fa-solid fa-clock"></i>
-                <p><strong>Öffnungszeiten:</strong><br>Mo-Do: 08:00 - 17:00<br>Fr: 09:00 - 14:00</p>
+                <p><strong>Öffnungszeiten:</strong><br>Mo-Do: 08:00 - 17:00<br>Fr: 08:00 - 14:00</p>
             </div>
         </div>
     </section>
@@ -156,7 +161,8 @@
         </div>
     </section>
 
-    <footer class="footer">
+    
+<footer role="contentinfo"  class="footer">
         <p>© 2024 Auto Service Zentrum Scholz</p>
         <p>
             <a href="#" id="open-impressum">Impressum & Datenschutz</a>
@@ -243,6 +249,16 @@
 
     <div id="snowflakes"></div> <!-- Weihnachtseffekte -->
     <script src="script.js"></script>
+
+</main>
+<script>
+// Lazy load all images for performance
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img");
+    images.forEach(img => img.setAttribute("loading", "lazy"));
+});
+</script>
 </body>
+
 
 </html>
